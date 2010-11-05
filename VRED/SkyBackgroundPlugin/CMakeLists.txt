@@ -28,7 +28,7 @@ set( ${PROJECTNAME}_UIS
   SkyBackgroundPluginFormBase.ui
 )
 
-STRING(REGEX REPLACE "\\\\" "/" VRED_DIR $ENV{VRED_DIR}) 
+#STRING(REGEX REPLACE "\\\\" "/" VRED_DIR $ENV{VRED_DIR}) 
 
 
 set (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)
@@ -75,7 +75,6 @@ include_directories( ${QT_INCLUDE_DIR} ${QT_INCLUDE_PATH}
   ${CMAKE_CURRENT_BINARY_DIR}
   ${VRED_DIR}/include/boost-1.34-vc8.0
   ${VRED_DIR}/include/vred
-  ${VRED_DIR}/include/glew
   ${VRED_DIR}/include/glut-3.7
   ${VRED_DIR}/include/OpenSG
   ${VRED_DIR}/include/OpenSG/OpenSG
@@ -83,7 +82,7 @@ include_directories( ${QT_INCLUDE_DIR} ${QT_INCLUDE_PATH}
   ${VRED_DIR}/include/python-2.52-vc8.0
 )
 
-link_directories ( ${VRED_DIR}/bin/WIN64 )
+link_directories ( ${VRED_DIR}/bin/WIN32 )
 
 # Put moc files in visual studio project folder
 source_group("Moc Files" REGULAR_EXPRESSION moc_*)
@@ -95,7 +94,7 @@ target_link_libraries( ${PROJECTNAME} ${QT_LIBRARIES}
   user32 kernel32 MSVCPRT MSVCRT winmm gdi32 wsock32 oldnames python25
   boost_python-vc80-mt-1_34_1 boost_iostreams-vc80-mt-1_34_1
   vrUtils vrQtExt Cg CgGL OSGBase OSGSystem OSGWindowWIN32 OSGContrib opengl32
-  glu32 vrOpenSGExt vrOpenSGNav vrOpenSGUtils vrMicroKernel glew32 vrOpenSGRender
+  glut32 vrOpenSGExt vrOpenSGNav vrOpenSGUtils vrMicroKernel vrOpenSGRender
   vrMessageRW vrIconManager als vrQScintilla vrCBShader vrKernel
 )
 
