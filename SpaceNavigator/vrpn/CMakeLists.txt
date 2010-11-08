@@ -8,10 +8,10 @@ set(SOURCES
 )
 
 # Set include directories
-include_directories(SYSTEM ${VRPN_INCLUDE_DIR})
-include_directories(SYSTEM ${QUAT_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(SYSTEM ${VRPN_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(SYSTEM ${QUAT_INCLUDE_DIR})
 
 # Create library
-add_library( VRPN_SpaceNavigator STATIC ${SOURCES} )
+ADD_LIBRARY( VRPN_SpaceNavigator STATIC ${SOURCES} )
 
-target_link_libraries(VRPN_SpaceNavigator ${VRPN_LIBRARIES})
+TARGET_LINK_LIBRARIES(VRPN_SpaceNavigator ${VRPN_LIBRARIES})

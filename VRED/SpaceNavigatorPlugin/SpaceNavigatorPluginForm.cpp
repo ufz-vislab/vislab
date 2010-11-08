@@ -307,7 +307,7 @@ void SpaceNavigatorPluginForm::ElevGridLoadSelected()
 		vrLog::warning("No node selected!");
 		return;
 	}
-	_elevGrid.LoadNode(node);
+	// TODO _elevGrid.LoadNode(node);
 	_elevGrid.SortIntoGrid(ElevGridCellXLineEdit->text().toInt(), ElevGridCellXLineEdit->text().toInt());
 	EnableElevGridCheckBox->setEnabled(true);
 	ElevGridLineEdit->setText(getName(node));

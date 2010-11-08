@@ -292,7 +292,7 @@
 <customwidgets>
     <customwidget>
         <class>exSlider</class>
-        <header location="global">E:/bilke/apps/vred-2.5/include/vred/exSlider.h</header>
+        <header location="global">exSlider.h</header>
         <sizehint>
             <width>120</width>
             <height>20</height>

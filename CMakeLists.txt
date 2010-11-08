@@ -2,6 +2,92 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT (Vislab)
 
+OPTION (INSTALL_ON_POSTBUILD "Should the VRED plugins be copied to VRED after building?" OFF)
+OPTION (VISLAB_PACKAGING "Should the plugins be packaged?" OFF)
+OPTION (VISLAB_PACKAGING_ZIP "Should the plugins be zipped? VISLAB_PACKAGING must be set to ON" ON)
+
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMakeConfiguration")
 
+# check bit architecture
+IF( CMAKE_SIZEOF_VOID_P EQUAL 4 )
+ SET( HAVE_64_BIT 0 )
+ SET( BITS 32 )
+ELSE()
+ SET( HAVE_64_BIT 1 )
+ SET( BITS 64)
+ENDIF()
+MESSAGE(STATUS "Compiling for x${BITS} architecture")
+
+# Set directories
+IF (DEFINED $ENV{VRED_DIR})
+	STRING(REGEX REPLACE "\\\\" "/" VRED_DIR $ENV{VRED_DIR})
+ENDIF ()
+IF (DEFINED ${VRED_DIR})
+	STRING(REGEX REPLACE "\\\\" "/" VRED_DIR ${VRED_DIR})
+ENDIF ()
+SET(VRED_PLUGIN_DIR ${VRED_DIR}/lib/plugins/WIN${BITS}/Module/)
+
+# Only release configurations possible when compiling a VRED plugin
+SET (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)
+FIND_PACKAGE( Qt3VRED REQUIRED )
+
+INCLUDE (CMakeConfiguration/Macros.cmake)
+
+# OpenSG Compiler flags
+# Suppress OpenSG warnings, Set warning Level to 1
+IF(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
+     STRING(REGEX REPLACE "/W[0-4]" "/W1" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+ELSE(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
+     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W1")
+ENDIF(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
+
+ADD_DEFINITIONS(
+  -DBOOST_PYTHON_DYNAMIC_LIB
+  -DBOOST_IOSTREAMS_DYN_LINK
+  -DQT_DLL
+  -DQT_THREAD_SUPPORT
+  -DQT_ACCESSIBILITY_SUPPORT
+  -DQT_NO_DEBUG
+  -DQT_CLEAN_NAMESPACE
+  -D_OSG_HAVE_CONFIGURED_H_
+  -DOSG_BUILD_DLL
+  -DOSG_WITH_GLUT
+  -DOSG_WITH_GIF
+  -DOSG_WITH_TIF
+  -DOSG_WITH_JPG
+  -D/MP
+)
+
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DOSG_DEBUG")
+SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO  "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} /ZI /Od /Ob0")
+
+INCLUDE_DIRECTORIES( ${QT_INCLUDE_DIR} ${QT_INCLUDE_PATH}
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${VRED_DIR}/include/boost-1.34-vc8.0
+  ${VRED_DIR}/include/vred
+  ${VRED_DIR}/include/glut-3.7
+  ${VRED_DIR}/include/OpenSG
+  ${VRED_DIR}/include/OpenSG/OpenSG
+  ${VRED_DIR}/include/qt-3.38-vc8.0
+  ${VRED_DIR}/include/python-2.52-vc8.0
+)
+
+LINK_DIRECTORIES ( ${VRED_DIR}/bin/WIN32 )
+
+SET (VRED_LIBRARIES
+	user32 kernel32 MSVCPRT MSVCRT winmm gdi32 wsock32 oldnames python25
+	boost_python-vc80-mt-1_34_1 boost_iostreams-vc80-mt-1_34_1
+	vrUtils vrQtExt Cg CgGL OSGBase OSGSystem OSGWindowWIN32 OSGContrib opengl32
+	glut32 vrOpenSGExt vrOpenSGNav vrOpenSGUtils vrMicroKernel vrOpenSGRender
+	vrMessageRW vrIconManager als vrQScintilla vrCBShader vrKernel)
+	
+SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin )
+SET( LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib )
+
+IF (VISLAB_PACKAGING)
+	INCLUDE (CMakeConfiguration/Pack.cmake)
+ENDIF ()
+
 ADD_SUBDIRECTORY(VRED/SkyBackgroundPlugin)
+ADD_SUBDIRECTORY(SpaceNavigator)
+ADD_SUBDIRECTORY(VRED/SpaceNavigatorPlugin)
