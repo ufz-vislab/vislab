@@ -1,5 +1,7 @@
 #### Packaging setup for Vislab ####
 
+INCLUDE(CMakeConfiguration/InstallRequiredSystemLibraries.cmake)
+
 SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Vislab")
 SET(CPACK_PACKAGE_VENDOR "Lars Bilke")
 SET(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
