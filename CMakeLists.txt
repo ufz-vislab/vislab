@@ -25,7 +25,7 @@ ENDIF ()
 IF (DEFINED ${VRED_DIR})
 	STRING(REGEX REPLACE "\\\\" "/" VRED_DIR ${VRED_DIR})
 ENDIF ()
-SET(VRED_PLUGIN_DIR ${VRED_DIR}/lib/plugins/WIN${BITS}/Module/)
+SET(VRED_PLUGIN_DIR ${VRED_DIR}/lib/plugins/WIN${BITS}/Module)
 
 # Only release configurations possible when compiling a VRED plugin
 SET (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)

@@ -32,8 +32,11 @@ using namespace std;
 SkyBackgroundPluginForm::SkyBackgroundPluginForm( QWidget* parent /*= 0*/, const char* name /*= 0*/, WFlags fl /*= 0*/ )
 	: SkyBackgroundPluginFormBase(parent, name, fl)
 {
-	skyDir = QDir("E:/bilke/Data/SkyBackgrounds");
-	//skyDir = "D:/Data/SkyBackgrounds";
+
+	settings.setPath("UFZ", "VRED-SkyBackgroundPlugin");
+
+	skyDir = QDir(settings.readEntry("presetDir", "D:/Data/SkyBackgrounds"));
+	presetDirLineEdit->setText(skyDir.absPath());
 
 	presetDirs[0] = QDir("NiceDay");
 	//presetDirs[1] = QDir("NiceDay/1024");
@@ -71,7 +74,7 @@ SkyBackgroundPluginForm::~SkyBackgroundPluginForm()
 void SkyBackgroundPluginForm::on_loadPushButton_clicked()
 {
 	QFileDialog fileDlg(this);
-	QDir dir = skyDir;
+	QDir dir = settings.readEntry("loadDir", skyDir.absPath());
 	if (dir.exists())
 		fileDlg.setDir(dir);
 	fileDlg.setMode(QFileDialog::DirectoryOnly);
@@ -83,6 +86,26 @@ void SkyBackgroundPluginForm::on_loadPushButton_clicked()
 		setupSkyBackground(*loadDir, zUpCheckBox->isChecked());
 		directoryLineEdit->setText(fileDlg.dir()->absPath());
 		enableCheckBox->setChecked(true);
+
+		settings.writeEntry("loadDir", fileDlg.dir()->absPath());
+	}
+}
+
+void SkyBackgroundPluginForm::on_presetDirPushButton_clicked()
+{
+	QFileDialog fileDlg(this);
+	QDir dir = settings.readEntry("presetDir", skyDir.absPath());
+	if (dir.exists())
+		fileDlg.setDir(dir);
+	fileDlg.setMode(QFileDialog::DirectoryOnly);
+	fileDlg.setCaption("Select the presets directory");
+
+	if (fileDlg.exec())
+	{
+		skyDir = QDir(*fileDlg.dir());
+		presetDirLineEdit->setText(fileDlg.dir()->absPath());
+
+		settings.writeEntry("presetDir", fileDlg.dir()->absPath());
 	}
 }
 
@@ -412,8 +435,8 @@ void SkyBackgroundPluginForm::on_Preset1_4PushButton_clicked()
 void SkyBackgroundPluginForm::on_Preset2_1PushButton_clicked()
 {
 	QDir dir = skyDir;
-	dir.cd(presetDirs[1].path());
-	dir.cd("05");
+	//dir.cd(presetDirs[1].path());
+	dir.cd("Blury_256");
 	setupSkyBackground(dir, zUpCheckBox->isChecked());
 	directoryLineEdit->setText(dir.absPath());
 	enableCheckBox->setChecked(true);
@@ -422,8 +445,8 @@ void SkyBackgroundPluginForm::on_Preset2_1PushButton_clicked()
 void SkyBackgroundPluginForm::on_Preset2_2PushButton_clicked()
 {
 	QDir dir = skyDir;
-	dir.cd(presetDirs[1].path());
-	dir.cd("08");
+	//dir.cd(presetDirs[1].path());
+	dir.cd("CloudyEvening_1024");
 	setupSkyBackground(dir, zUpCheckBox->isChecked());
 	directoryLineEdit->setText(dir.absPath());
 	enableCheckBox->setChecked(true);
@@ -432,8 +455,8 @@ void SkyBackgroundPluginForm::on_Preset2_2PushButton_clicked()
 void SkyBackgroundPluginForm::on_Preset2_3PushButton_clicked()
 {
 	QDir dir = skyDir;
-	dir.cd(presetDirs[1].path());
-	dir.cd("12");
+	//dir.cd(presetDirs[1].path());
+	dir.cd("Dusty_512");
 	setupSkyBackground(dir, zUpCheckBox->isChecked());
 	directoryLineEdit->setText(dir.absPath());
 	enableCheckBox->setChecked(true);
@@ -442,8 +465,8 @@ void SkyBackgroundPluginForm::on_Preset2_3PushButton_clicked()
 void SkyBackgroundPluginForm::on_Preset2_4PushButton_clicked()
 {
 	QDir dir = skyDir;
-	dir.cd(presetDirs[1].path());
-	dir.cd("19");
+	//dir.cd(presetDirs[1].path());
+	dir.cd("SunnyBright_512");
 	setupSkyBackground(dir, zUpCheckBox->isChecked());
 	directoryLineEdit->setText(dir.absPath());
 	enableCheckBox->setChecked(true);
@@ -452,8 +475,8 @@ void SkyBackgroundPluginForm::on_Preset2_4PushButton_clicked()
 void SkyBackgroundPluginForm::on_Preset3_1PushButton_clicked()
 {
 	QDir dir = skyDir;
-	dir.cd(presetDirs[2].path());
-	dir.cd("05");
+	//dir.cd(presetDirs[2].path());
+	dir.cd("SunnyClouds_1024");
 	setupSkyBackground(dir, zUpCheckBox->isChecked());
 	directoryLineEdit->setText(dir.absPath());
 	enableCheckBox->setChecked(true);

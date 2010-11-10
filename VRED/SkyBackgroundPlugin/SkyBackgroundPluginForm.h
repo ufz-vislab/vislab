@@ -18,11 +18,13 @@
 #include "OpenSG/OSGLight.h"
 
 #include "qdir.h"
+#include "qsettings.h"
 
 #include <string>
 
 OSG_USING_NAMESPACE
 using namespace std;
+
 
 /**
  * SkyBackgroundPluginForm
@@ -46,6 +48,8 @@ private:
 	QDir skyDir;
 	QDir presetDirs[3];
 
+	QSettings settings;
+
 	void setLightSettings( LightPtr light, LightSettingsHandler &handler );
 
 public slots:
@@ -57,6 +61,7 @@ public slots:
 
 private slots:
 	void on_loadPushButton_clicked();
+	void on_presetDirPushButton_clicked();
 
 	void on_Preset1_1PushButton_clicked();
 	void on_Preset1_2PushButton_clicked();

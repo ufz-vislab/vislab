@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>309</width>
-            <height>352</height>
+            <height>377</height>
         </rect>
     </property>
     <property name="caption">
@@ -141,31 +141,29 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLabel" row="0" column="0">
+                <widget class="QPushButton" row="2" column="1">
                     <property name="name">
-                        <cstring>textLabel1_2</cstring>
+                        <cstring>Preset2_1PushButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
                     </property>
                     <property name="text">
-                        <string>Nice Day</string>
+                        <string>Blurry</string>
                     </property>
                 </widget>
-                <widget class="QLabel" row="0" column="1">
+                <widget class="QPushButton" row="5" column="1">
                     <property name="name">
-                        <cstring>textLabel2</cstring>
+                        <cstring>Preset2_4PushButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
                     </property>
                     <property name="text">
-                        <string>Other Preset</string>
+                        <string>Sunny Bright</string>
                     </property>
                 </widget>
-                <widget class="QLabel" row="0" column="2">
-                    <property name="name">
-                        <cstring>textLabel3</cstring>
-                    </property>
-                    <property name="text">
-                        <string>3rd Preset</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="1" column="0">
+                <widget class="QPushButton" row="2" column="0">
                     <property name="name">
                         <cstring>Preset1_1PushButton</cstring>
                     </property>
@@ -173,15 +171,45 @@
                         <string>Sundawn</string>
                     </property>
                 </widget>
-                <widget class="QPushButton" row="3" column="0">
+                <widget class="QPushButton" row="2" column="2">
                     <property name="name">
-                        <cstring>Preset1_3PushButton</cstring>
+                        <cstring>Preset3_1PushButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
                     </property>
                     <property name="text">
-                        <string>Afternoon</string>
+                        <string>Sunny Clouds</string>
                     </property>
                 </widget>
-                <widget class="QPushButton" row="2" column="0">
+                <widget class="QLabel" row="1" column="0">
+                    <property name="name">
+                        <cstring>textLabel1_2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Nice Day</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="2">
+                    <property name="name">
+                        <cstring>textLabel3</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Other Presets</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="3" column="1">
+                    <property name="name">
+                        <cstring>Preset2_2PushButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="text">
+                        <string>Cloudy Evening</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="3" column="0">
                     <property name="name">
                         <cstring>Preset1_2PushButton</cstring>
                     </property>
@@ -189,70 +217,7 @@
                         <string>Noon</string>
                     </property>
                 </widget>
-                <widget class="QPushButton" row="4" column="0">
-                    <property name="name">
-                        <cstring>Preset1_4PushButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Sunset</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="3" column="1">
-                    <property name="name">
-                        <cstring>Preset2_3PushButton</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Noon</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="2" column="1">
-                    <property name="name">
-                        <cstring>Preset2_2PushButton</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Morning</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="4" column="1">
-                    <property name="name">
-                        <cstring>Preset2_4PushButton</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Sunset</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="1" column="1">
-                    <property name="name">
-                        <cstring>Preset2_1PushButton</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Sundawn</string>
-                    </property>
-                </widget>
                 <widget class="QPushButton" row="3" column="2">
-                    <property name="name">
-                        <cstring>Preset3_3PushButton</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Noon</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="2" column="2">
                     <property name="name">
                         <cstring>Preset3_2PushButton</cstring>
                     </property>
@@ -260,21 +225,77 @@
                         <bool>false</bool>
                     </property>
                     <property name="text">
-                        <string>Morning</string>
+                        <string>...</string>
                     </property>
                 </widget>
-                <widget class="QPushButton" row="1" column="2">
+                <widget class="QPushButton" row="4" column="0">
                     <property name="name">
-                        <cstring>Preset3_1PushButton</cstring>
+                        <cstring>Preset1_3PushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Afternoon</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="1">
+                    <property name="name">
+                        <cstring>Preset2_3PushButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="text">
+                        <string>Dusty</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="2">
+                    <property name="name">
+                        <cstring>Preset3_3PushButton</cstring>
                     </property>
                     <property name="enabled">
                         <bool>false</bool>
                     </property>
                     <property name="text">
-                        <string>Sundawn</string>
+                        <string>...</string>
                     </property>
                 </widget>
-                <widget class="QPushButton" row="4" column="2">
+                <widget class="QPushButton" row="5" column="0">
+                    <property name="name">
+                        <cstring>Preset1_4PushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Sunset</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="1">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Other Presets</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>textLabel1_4</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Preset directory</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="0" column="1">
+                    <property name="name">
+                        <cstring>presetDirLineEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="2">
+                    <property name="name">
+                        <cstring>presetDirPushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="5" column="2">
                     <property name="name">
                         <cstring>Preset3_4PushButton</cstring>
                     </property>
@@ -282,7 +303,7 @@
                         <bool>false</bool>
                     </property>
                     <property name="text">
-                        <string>Sunset</string>
+                        <string>...</string>
                     </property>
                 </widget>
             </grid>
@@ -418,7 +439,35 @@
         <receiver>SkyBackgroundPluginFormBase</receiver>
         <slot>on_SetLightingCheckBox_toggled(bool)</slot>
     </connection>
+    <connection>
+        <sender>presetDirPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>SkyBackgroundPluginFormBase</receiver>
+        <slot>on_presetDirPushButton_clicked()</slot>
+    </connection>
 </connections>
+<tabstops>
+    <tabstop>loadPushButton</tabstop>
+    <tabstop>zUpCheckBox</tabstop>
+    <tabstop>enableCheckBox</tabstop>
+    <tabstop>SetLightingCheckBox</tabstop>
+    <tabstop>LightNameLineEdit</tabstop>
+    <tabstop>presetDirPushButton</tabstop>
+    <tabstop>Preset1_1PushButton</tabstop>
+    <tabstop>Preset1_2PushButton</tabstop>
+    <tabstop>Preset1_3PushButton</tabstop>
+    <tabstop>Preset1_4PushButton</tabstop>
+    <tabstop>Preset2_1PushButton</tabstop>
+    <tabstop>Preset2_2PushButton</tabstop>
+    <tabstop>Preset2_3PushButton</tabstop>
+    <tabstop>Preset2_4PushButton</tabstop>
+    <tabstop>Preset3_1PushButton</tabstop>
+    <tabstop>Preset3_2PushButton</tabstop>
+    <tabstop>Preset3_3PushButton</tabstop>
+    <tabstop>Preset3_4PushButton</tabstop>
+    <tabstop>directoryLineEdit</tabstop>
+    <tabstop>presetDirLineEdit</tabstop>
+</tabstops>
 <slots>
     <slot>on_loadPushButton_clicked()</slot>
     <slot>on_enableCheckBox_toggled(bool checked)</slot>
@@ -436,9 +485,10 @@
     <slot>on_Preset3_3PushButton_clicked()</slot>
     <slot>on_Preset3_4PushButton_clicked()</slot>
     <slot>on_SetLightingCheckBox_toggled(bool checked)</slot>
+    <slot>on_presetDirPushButton_clicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
-    <includehint>exslider.h</includehint>
+    <includehint>E:/bilke/apps/vred-2.5/include/vred/exSlider.h</includehint>
 </includehints>
 </UI>
