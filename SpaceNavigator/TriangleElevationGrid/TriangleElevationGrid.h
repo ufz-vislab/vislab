@@ -38,6 +38,7 @@ public:
 	~CTriangleElevationGrid(void);
 
 	bool LoadFile(const char *filename);
+	bool LoadNode(NodePtr node);
 	NodePtr GetRoot(){return m_posgRoot;}
 	void GetXYExtension(double &xMin, double &yMin, double &xMax, double &yMax);
 	void SortIntoGrid(int numXCells, int numYCells);

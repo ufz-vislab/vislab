@@ -14,6 +14,7 @@
 #include "qcheckbox.h"
 #include "qcombobox.h"
 #include "qfiledialog.h"
+#include "qsettings.h"
 
 #include "SpaceNavigatorPluginForm.h"
 #include "SpaceNavigatorOSGClient.h"
@@ -35,6 +36,12 @@ SpaceNavigatorPluginForm::SpaceNavigatorPluginForm( QWidget* parent /*= 0*/, con
 	translationFactorSlider->setValue(10.0f);
 	rotationFactorSlider->setRange(0.1, 2.0);
 	rotationFactorSlider->setValue(1.0f);
+
+	QSettings settings;
+	settings.setPath("UFZ", "VRED-SpaceNavigatorPlugin");
+	QString connectString = settings.readEntry("connectionString",
+		QString("SpaceNav@viswork06.intern.ufz.de"));
+	vrpnDeviceLineEdit->setText(connectString);
 }
 
 SpaceNavigatorPluginForm::~SpaceNavigatorPluginForm() 
@@ -52,6 +59,9 @@ void SpaceNavigatorPluginForm::CheckVRPNDeviceTextEditInput( const QString& text
 void SpaceNavigatorPluginForm::SetConnectString( const char* connectString )
 {
 	vrpnDeviceLineEdit->setText(QString(connectString));
+	QSettings settings;
+	settings.setPath("UFZ", "VRED-SpaceNavigatorPlugin");
+	settings.writeEntry("connectionString", QString(connectString));
 }
 void SpaceNavigatorPluginForm::ConnectToDevice()
 {
@@ -307,7 +317,7 @@ void SpaceNavigatorPluginForm::ElevGridLoadSelected()
 		vrLog::warning("No node selected!");
 		return;
 	}
-	// TODO _elevGrid.LoadNode(node);
+	_elevGrid.LoadNode(node);
 	_elevGrid.SortIntoGrid(ElevGridCellXLineEdit->text().toInt(), ElevGridCellXLineEdit->text().toInt());
 	EnableElevGridCheckBox->setEnabled(true);
 	ElevGridLineEdit->setText(getName(node));

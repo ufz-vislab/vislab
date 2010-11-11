@@ -21,13 +21,19 @@ CTriangleElevationGrid::~CTriangleElevationGrid(void){
 
 bool CTriangleElevationGrid::LoadFile(const char *filename){
 	m_posgRoot = SceneFileHandler::the().read(filename, NULL);
-	if (m_posgRoot != NullFC){
-		m_posgGeo = FindGeometry(m_posgRoot);
+	return LoadNode(m_posgRoot);
+}
+
+bool CTriangleElevationGrid::LoadNode( NodePtr node )
+{
+	if (node != NullFC){
+		m_posgGeo = FindGeometry(node);
 		return true;
 	}
 	else
 		return false;
 }
+
 
 void CTriangleElevationGrid::GetXYExtension(double &xMin, double &yMin, double &xMax, double &yMax){
 	int i;
@@ -198,7 +204,6 @@ GeometryPtr CTriangleElevationGrid::FindGeometry(NodePtr node){
 	}
 	return NullFC;
 }
-
 
 CTriangleElevationGrid::CTriangleParams::CTriangleParams(Pnt3f p1, Pnt3f p2, Pnt3f p3){
 	// P = P1 + lambda1 * (P2-P1) + lambda2 * (P3-P1)
