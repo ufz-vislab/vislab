@@ -42,14 +42,25 @@ IF(QT_INCLUDE_DIR)
 ENDIF(QT_INCLUDE_DIR)
 
 FILE(GLOB GLOB_PATHS_LIB /usr/lib/qt-3*/lib/)
-  FIND_LIBRARY(QT_QT_LIBRARY
-    NAMES
-    qt-mt qt-mt${qt_version_str_lib} qt-mtnc${qt_version_str_lib}
-    qt-mtedu${qt_version_str_lib} qt-mt230nc qt-mtnc321 qt-mt3
-    PATHS
-    ${VRED_DIR}/bin/WIN32
-    NO_DEFAULT_PATH
-    )
+IF(CMAKE_SIZEOF_VOID_P EQUAL 4)
+	FIND_LIBRARY(QT_QT_LIBRARY
+	    NAMES
+	    qt-mt qt-mt${qt_version_str_lib} qt-mtnc${qt_version_str_lib}
+	    qt-mtedu${qt_version_str_lib} qt-mt230nc qt-mtnc321 qt-mt3
+	    PATHS
+	    ${VRED_DIR}/bin/WIN32
+	    NO_DEFAULT_PATH
+	    )
+ELSE ()
+	FIND_LIBRARY(QT_QT_LIBRARY
+	    NAMES
+	    qt-mt qt-mt${qt_version_str_lib} qt-mtnc${qt_version_str_lib}
+	    qt-mtedu${qt_version_str_lib} qt-mt230nc qt-mtnc321 qt-mt3
+	    PATHS
+	    ${VRED_DIR}/bin/WIN64
+	    NO_DEFAULT_PATH
+	    )
+ENDIF()
 
 FIND_LIBRARY(QT_QASSISTANTCLIENT_LIBRARY
   NAMES qassistantclient
