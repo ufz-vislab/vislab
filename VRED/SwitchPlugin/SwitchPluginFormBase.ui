@@ -1,0 +1,79 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>SwitchPluginFormBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>SwitchPluginFormBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>152</width>
+            <height>66</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>SwitchPlugin</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Choice</string>
+                    </property>
+                </widget>
+                <widget class="QSpinBox">
+                    <property name="name">
+                        <cstring>choiceSpinBox</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>choiceSlider</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>choiceSpinBox</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SwitchPluginFormBase</receiver>
+        <slot>setChoice(int)</slot>
+    </connection>
+    <connection>
+        <sender>choiceSpinBox</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>choiceSlider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>choiceSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>choiceSpinBox</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot access="protected">setChoice(int choice)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
