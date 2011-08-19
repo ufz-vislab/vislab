@@ -3,6 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 PROJECT (Vislab)
 
 OPTION (INSTALL_ON_POSTBUILD "Should the VRED plugins be copied to VRED after building?" OFF)
+SET (INSTALL_VRED_DIR "" CACHE PATH "If INSTALL_ON_POSTBUILD is on this optionally installs to another VRED directory.")
 OPTION (VISLAB_PACKAGING "Should the plugins be packaged?" OFF)
 OPTION (VISLAB_PACKAGING_ZIP "Should the plugins be zipped? VISLAB_PACKAGING must be set to ON" ON)
 
@@ -25,7 +26,11 @@ ENDIF ()
 IF (DEFINED ${VRED_DIR})
 	STRING(REGEX REPLACE "\\\\" "/" VRED_DIR ${VRED_DIR})
 ENDIF ()
-SET(VRED_PLUGIN_DIR ${VRED_DIR}/lib/plugins/WIN${BITS}/Module)
+IF (INSTALL_VRED_DIR)
+  SET(VRED_PLUGIN_DIR ${INSTALL_VRED_DIR}/lib/plugins/WIN${BITS}/Module)
+ELSE ()
+  SET(VRED_PLUGIN_DIR ${VRED_DIR}/lib/plugins/WIN${BITS}/Module)
+ENDIF ()
 
 # Only release configurations possible when compiling a VRED plugin
 SET (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)
