@@ -13,6 +13,7 @@ class QTime;
 #include "vrAEBase.h"
 #include "OpenSG/OSGSwitch.h"
 #include "OpenSG/OSGNode.h"
+#include "qsettings.h"
 
 /// @brief
 class SwitchPluginForm : public SwitchPluginFormBase, vrAEBase
@@ -31,10 +32,13 @@ protected:
   int _maxChoice;
   bool _playing;
   QTime* _timer;
+  QSettings _settings;
 
 protected slots:
   void setChoice(int);
   void playOrStop();
+  void setLoop(bool loop);
+  void setSpeed(int speed);
 
 };
 

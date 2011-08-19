@@ -144,10 +144,24 @@
         <receiver>SwitchPluginFormBase</receiver>
         <slot>playOrStop()</slot>
     </connection>
+    <connection>
+        <sender>loopCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>SwitchPluginFormBase</receiver>
+        <slot>setLoop(bool)</slot>
+    </connection>
+    <connection>
+        <sender>speedSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SwitchPluginFormBase</receiver>
+        <slot>setSpeed(int)</slot>
+    </connection>
 </connections>
 <slots>
     <slot access="protected">setChoice(int choice)</slot>
     <slot access="protected">playOrStop()</slot>
+    <slot access="protected">setLoop(bool loop)</slot>
+    <slot>setSpeed(int speed)</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

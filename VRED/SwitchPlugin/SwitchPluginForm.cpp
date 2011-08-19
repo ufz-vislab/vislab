@@ -17,9 +17,14 @@
 SwitchPluginForm::SwitchPluginForm(QWidget* parent, const char* name, WFlags fl)
   : SwitchPluginFormBase(parent, name, fl), _maxChoice(-1), _playing(false)
 {
-  this->choiceSpinBox->setMinValue(0);
-  this->choiceSlider->setMinValue(0);
-  this->_timer = new QTime();
+  setEnabled(false);
+  choiceSpinBox->setMinValue(0);
+  choiceSlider->setMinValue(0);
+  _timer = new QTime();
+  _settings.setPath("UFZ", "VRED-SwitchPlugin");
+  std::cout << "Reading " << _settings.readBoolEntry("loop") << std::endl;
+  loopCheckBox->setChecked(_settings.readBoolEntry("loop"));
+  speedSlider->setValue(_settings.readDoubleEntry("speed", 0.0));
 }
 
 SwitchPluginForm::~SwitchPluginForm()
@@ -28,22 +33,21 @@ SwitchPluginForm::~SwitchPluginForm()
 
 void SwitchPluginForm::loop()
 {
-	if(_playing && _timer->elapsed() > this->speedSlider->value())
+	if(_playing && _timer->elapsed() > speedSlider->value())
 	{
 		int currentChoice = _switch->getChoice();
 		if(currentChoice < _maxChoice)
 		{
-			this->choiceSpinBox->setValue(currentChoice + 1);
-			this->update();
-			//setChoice(currentChoice + 1);
+			choiceSpinBox->setValue(currentChoice + 1);
+			update();
 			_timer->restart();
 		}
 		else
 		{
 			if(loopCheckBox->isChecked())
 			{
-				this->choiceSpinBox->setValue(0);
-				this->update();
+				choiceSpinBox->setValue(0);
+				update();
 				_timer->restart();
 			}
 			else
@@ -55,31 +59,37 @@ void SwitchPluginForm::loop()
 void SwitchPluginForm::setSwitchNode(OSG::NodePtr switchNode)
 {
   if(switchNode != OSG::NullFC)
-    _switch = OSG::SwitchPtr::dcast(switchNode->getCore());
+  {
+    // Dont enable for switch with one or zero children
+    if(switchNode->getNChildren() < 2)
+	  _switch = OSG::NullFC;
+	else
+      _switch = OSG::SwitchPtr::dcast(switchNode->getCore());
+  }
   else
     _switch == OSG::NullFC;
     
   if(_switch == OSG::NullFC)
   {
     // Disable form
-    this->setEnabled(false);
+    setEnabled(false);
 	_playing = false;
-	this->playPushButton->setText("Play");
+	playPushButton->setText("Play");
   }
   else
   {
     // Enable form
-    this->setEnabled(true);
+    setEnabled(true);
     int choice = _switch->getChoice();
     _maxChoice = switchNode->getNChildren() -1;
     
     // Set GUI elements
     
-    this->choiceSpinBox->setMaxValue(_maxChoice);
-    this->choiceSpinBox->setValue(choice);
+    choiceSpinBox->setMaxValue(_maxChoice);
+    choiceSpinBox->setValue(choice);
     
-    this->choiceSlider->setMaxValue(_maxChoice);
-    this->choiceSlider->setValue(choice);
+    choiceSlider->setMaxValue(_maxChoice);
+    choiceSlider->setValue(choice);
   }
 }
 
@@ -95,14 +105,24 @@ void SwitchPluginForm::playOrStop()
 	_playing = !_playing;
 	if(_playing)
 	{
-		this->playPushButton->setText("Stop");
+		playPushButton->setText("Stop");
 		// If animation at the end play back from the beginning
 		if(_switch->getChoice() >= _maxChoice)
-			this->choiceSpinBox->setValue(0);
+			choiceSpinBox->setValue(0);
 		_timer->restart();
 	}
 	else
 	{
-		this->playPushButton->setText("Play");
+		playPushButton->setText("Play");
 	}
+}
+
+void SwitchPluginForm::setLoop(bool loop)
+{
+	_settings.writeEntry("loop", loop);
+}
+
+void SwitchPluginForm::setSpeed(int speed)
+{
+	_settings.writeEntry("speed", (double)speed);
 }
