@@ -6,6 +6,8 @@
 #ifndef SWITCHPLUGINFORM_H
 #define SWITCHPLUGINFORM_H
 
+class QTime;
+
 #include "SwitchPluginFormBase.h"
 
 #include "vrAEBase.h"
@@ -26,9 +28,13 @@ public:
 
 protected:
   OSG::SwitchPtr _switch;
+  int _maxChoice;
+  bool _playing;
+  QTime* _timer;
 
-public slots:
+protected slots:
   void setChoice(int);
+  void playOrStop();
 
 };
 

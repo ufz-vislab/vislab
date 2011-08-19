@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>152</width>
-            <height>66</height>
+            <width>179</width>
+            <height>180</height>
         </rect>
     </property>
     <property name="caption">
@@ -19,36 +19,103 @@
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QLayoutWidget">
+        <widget class="QGroupBox">
             <property name="name">
-                <cstring>layout1</cstring>
+                <cstring>groupBox5</cstring>
             </property>
-            <hbox>
+            <property name="title">
+                <string>Choice Selection</string>
+            </property>
+            <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLabel">
+                <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>textLabel1</cstring>
+                        <cstring>layout1</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Choice</string>
+                            </property>
+                        </widget>
+                        <widget class="QSpinBox">
+                            <property name="name">
+                                <cstring>choiceSpinBox</cstring>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QSlider">
+                    <property name="name">
+                        <cstring>choiceSlider</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox6</cstring>
+            </property>
+            <property name="title">
+                <string>Animation Playback</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QSlider" row="0" column="1" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>speedSlider</cstring>
+                    </property>
+                    <property name="maxValue">
+                        <number>1000</number>
+                    </property>
+                    <property name="lineStep">
+                        <number>50</number>
+                    </property>
+                    <property name="pageStep">
+                        <number>100</number>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
                     </property>
                     <property name="text">
-                        <string>Choice</string>
+                        <string>Speed (0-1s)</string>
                     </property>
                 </widget>
-                <widget class="QSpinBox">
+                <widget class="QCheckBox" row="1" column="2">
                     <property name="name">
-                        <cstring>choiceSpinBox</cstring>
+                        <cstring>loopCheckBox</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Loop</string>
                     </property>
                 </widget>
-            </hbox>
-        </widget>
-        <widget class="QSlider">
-            <property name="name">
-                <cstring>choiceSlider</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Horizontal</enum>
-            </property>
+                <widget class="QPushButton" row="1" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>playPushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Play</string>
+                    </property>
+                </widget>
+            </grid>
         </widget>
     </vbox>
 </widget>
@@ -71,9 +138,16 @@
         <receiver>choiceSpinBox</receiver>
         <slot>setValue(int)</slot>
     </connection>
+    <connection>
+        <sender>playPushButton</sender>
+        <signal>pressed()</signal>
+        <receiver>SwitchPluginFormBase</receiver>
+        <slot>playOrStop()</slot>
+    </connection>
 </connections>
 <slots>
     <slot access="protected">setChoice(int choice)</slot>
+    <slot access="protected">playOrStop()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>
