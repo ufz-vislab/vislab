@@ -133,7 +133,7 @@
 </actions>
 <includes>
     <include location="local" impldecl="in implementation">NavigationDiagramView.h</include>
-    <include location="local" impldecl="in implementation">NavigatonAttrPanel.h</include>
+    <include location="local" impldecl="in implementation">NavigationAttrPanel.h</include>
     <include location="local" impldecl="in implementation">qsplitter.h</include>
     <include location="local" impldecl="in implementation">NavigationProjectController.h</include>
     <include location="local" impldecl="in implementation">NavigationMainFrame.ui.h</include>

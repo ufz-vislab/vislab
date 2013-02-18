@@ -349,7 +349,7 @@
     <include location="local" impldecl="in implementation">NavigationProjectController.h</include>
     <include location="local" impldecl="in implementation">qfiledialog.h</include>
     <include location="local" impldecl="in implementation">qvalidator.h</include>
-    <include location="local" impldecl="in implementation">NavigatonAttrPanel.ui.h</include>
+    <include location="local" impldecl="in implementation">NavigationAttrPanel.ui.h</include>
 </includes>
 <variables>
     <variable>double m_dUpperHeight;</variable>

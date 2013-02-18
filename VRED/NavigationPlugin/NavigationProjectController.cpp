@@ -3,7 +3,7 @@
 
 #include "NavigationProjectController.h"
 #include "NavigationDiagramView.h"
-#include "NavigatonAttrPanel.h"
+#include "NavigationAttrPanel.h"
 
 #include "ElevationGridBase.h"
 #include "TriangleElevationGrid.h"
