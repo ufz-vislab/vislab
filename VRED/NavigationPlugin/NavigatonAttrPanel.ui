@@ -1,0 +1,374 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CNavigationAttrPanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>CNavigationAttrPanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>222</width>
+            <height>810</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>1</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>130</width>
+            <height>800</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Attributes</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout9</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>21</x>
+                <y>33</y>
+                <width>142</width>
+                <height>647</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>LoadArealImageButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>110</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Load areal image</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>LoadTerrainButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>110</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Load 3D terrain</string>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer1</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>85</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>ScaleUpButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>110</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Scale up</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>ScaleDownButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>110</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Scale down</string>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer4</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1</cstring>
+                </property>
+                <property name="text">
+                    <string>Viewing distance:</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>ViewingDistanceEdit</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>110</width>
+                        <height>0</height>
+                    </size>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer5</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>60</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout8</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QSlider">
+                        <property name="name">
+                            <cstring>HeightSlider</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>400</height>
+                            </size>
+                        </property>
+                        <property name="minValue">
+                            <number>0</number>
+                        </property>
+                        <property name="maxValue">
+                            <number>400</number>
+                        </property>
+                        <property name="lineStep">
+                            <number>1</number>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer12</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>16</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout5</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>UpperHeightLineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>60</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer10</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>100</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>HeightEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>60</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer10_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>100</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>LowerHeightLineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>60</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                </hbox>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>LoadArealImageButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnLoadArealImageButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>ScaleUpButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnScaleUpButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>ScaleDownButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnScaleDownButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>LoadTerrainButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnLoadTerrainButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>HeightSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnHeightSliderChanged()</slot>
+    </connection>
+    <connection>
+        <sender>UpperHeightLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnUpperHeightLineEditChanged()</slot>
+    </connection>
+    <connection>
+        <sender>LowerHeightLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>CNavigationAttrPanel</receiver>
+        <slot>OnLowerHeightLineEditChanged()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">NavigationProjectController.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">qvalidator.h</include>
+    <include location="local" impldecl="in implementation">NavigatonAttrPanel.ui.h</include>
+</includes>
+<variables>
+    <variable>double m_dUpperHeight;</variable>
+    <variable>double m_dLowerHeight;</variable>
+    <variable>double m_dHeight;</variable>
+</variables>
+<slots>
+    <slot>OnLoadArealImageButtonPressed()</slot>
+    <slot>OnScaleUpButtonPressed()</slot>
+    <slot>OnScaleDownButtonPressed()</slot>
+    <slot>SetDistanceText( const char * text )</slot>
+    <slot>OnLoadTerrainButtonPressed()</slot>
+    <slot>OnHeightSliderChanged()</slot>
+    <slot>OnUpperHeightLineEditChanged()</slot>
+    <slot>OnLowerHeightLineEditChanged()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
