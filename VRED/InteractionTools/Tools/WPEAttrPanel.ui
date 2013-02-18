@@ -1,0 +1,211 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CQtVREDToolsPanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>CQtVREDToolsPanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>400</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>10</y>
+                <width>134</width>
+                <height>350</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>UseTrackingCheckBox</cstring>
+                </property>
+                <property name="text">
+                    <string>Use tracking</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>VRPNServerLineEdit</cstring>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>PrintVREDInfoButton</cstring>
+                </property>
+                <property name="text">
+                    <string>pushButton1</string>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer1</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>30</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>ArtDefaultToolComboBox</cstring>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>ArtTool1ComboBox</cstring>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>ArtTool2ComboBox</cstring>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>ArtTool3ComboBox</cstring>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>ArtTool4ComboBox</cstring>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer3</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>30</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>LoadToolsConfigButton</cstring>
+                </property>
+                <property name="text">
+                    <string>Load tools configuration</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>SaveToolsDefaultConfigButton</cstring>
+                </property>
+                <property name="text">
+                    <string>Save default configuration</string>
+                </property>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>UseTrackingCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnUseTrackingCheckBoxToggled()</slot>
+    </connection>
+    <connection>
+        <sender>PrintVREDInfoButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnPrintVREDInfoButton()</slot>
+    </connection>
+    <connection>
+        <sender>LoadToolsConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnLoadToolsConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>SaveToolsDefaultConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnSaveToolsConfigButtonClicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">ToolHolder.h</include>
+    <include location="local" impldecl="in implementation">VREDToolsSceneManager.h</include>
+    <include location="local" impldecl="in implementation">iostream</include>
+    <include location="local" impldecl="in implementation">ARTToolsManager.h</include>
+    <include location="local" impldecl="in implementation">vrOsgWidget.h</include>
+    <include location="local" impldecl="in implementation">OSGNode.h</include>
+    <include location="local" impldecl="in implementation">OSGTransform.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkNavigationTranslateTool.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkNavigationTranslationResetTool.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkCageFilterTool.h</include>
+    <include location="local" impldecl="in implementation">MouseTrackballNavigationTool.h</include>
+    <include location="local" impldecl="in implementation">XmlToolLoader.h</include>
+    <include location="local" impldecl="in implementation">WPEAttrPanel.ui.h</include>
+</includes>
+<forwards>
+    <forward>class CVREDToolsSceneManager</forward>
+</forwards>
+<variables>
+    <variable>CVREDToolsSceneManager* m_pSceneManager;</variable>
+</variables>
+<slots>
+    <slot>Loop()</slot>
+    <slot>LoadDefaultTools()</slot>
+    <slot>OnUseTrackingCheckBoxToggled()</slot>
+    <slot>OnPrintVREDInfoButton()</slot>
+    <slot>OnLoadToolsConfigButtonClicked()</slot>
+    <slot>OnSaveToolsConfigButtonClicked()</slot>
+    <slot>OnUpdateComboBoxes()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,767 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CQtVREDToolsPanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>CQtVREDToolsPanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>316</width>
+            <height>727</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>3</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Interaction tools</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout7</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>10</y>
+                <width>250</width>
+                <height>714</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout6</cstring>
+                </property>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>10</number>
+                    </property>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>UseTrackingCheckBox</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Use tracking</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit">
+                        <property name="name">
+                            <cstring>VRPNServerLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>PrintVREDInfoButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>pushButton1</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QComboBox">
+                        <property name="name">
+                            <cstring>ArtDefaultToolComboBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>16</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QComboBox">
+                        <property name="name">
+                            <cstring>ArtTool1ComboBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QComboBox">
+                        <property name="name">
+                            <cstring>ArtTool2ComboBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QComboBox">
+                        <property name="name">
+                            <cstring>ArtTool3ComboBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QComboBox">
+                        <property name="name">
+                            <cstring>ArtTool4ComboBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>LoadToolsConfigButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Load tools configuration</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>SaveToolsDefaultConfigurationButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Save example configuration</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer4</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>Load2DViewConfigButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Load 2D view configuration</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>Save2DViewExampleConfigButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Save 2D view example configuration</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer5</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>Load2DNavWindowConfigButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Load configuration for navigation window</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>Save2DNavWindowExampleConfigButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>210</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Save navigation window example config</string>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer6</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>16</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout6</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>UseCageFilterCheckBox</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Use cage for node:</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit">
+                        <property name="name">
+                            <cstring>CageFilterNodeNameLineEdit</cstring>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer8_2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>16</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout13</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>10</number>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout7</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Left window</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Right window</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Navigation window</string>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer8</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>16</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout9</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QPushButton" row="1" column="1">
+                                <property name="name">
+                                    <cstring>CloseRightWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>close</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="1">
+                                <property name="name">
+                                    <cstring>CloseLeftWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>close</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="2" column="1">
+                                <property name="name">
+                                    <cstring>CloseNavWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>close</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="2" column="0">
+                                <property name="name">
+                                    <cstring>OpenNavWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>open</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="1" column="0">
+                                <property name="name">
+                                    <cstring>OpenRightWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>open</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="0">
+                                <property name="name">
+                                    <cstring>OpenLeftWindowButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>open</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                </hbox>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>UseTrackingCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnUseTrackingCheckBoxToggled()</slot>
+    </connection>
+    <connection>
+        <sender>PrintVREDInfoButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnPrintVREDInfoButton()</slot>
+    </connection>
+    <connection>
+        <sender>SaveToolsDefaultConfigurationButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnSaveToolsDefaultConfigurationButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>LoadToolsConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnLoadToolsConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>Load2DViewConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnLoad2DViewConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>Save2DViewExampleConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnSave2DViewExampleConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>OpenLeftWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnOpenLeftWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>OpenRightWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnOpenRightWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>CloseLeftWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnCloseLeftWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>CloseRightWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnCloseRightWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>OpenNavWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnOpenNavWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>CloseNavWindowButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnCloseNavWindowButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>Load2DNavWindowConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnLoad2DNavWindowConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>Save2DNavWindowExampleConfigButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnSave2DNavWindowExampleConfigButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>CageFilterNodeNameLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnCageFilterNodeNameLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ArtTool1ComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnArtTool1ComboBoxChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ArtTool2ComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnArtTool2ComboBoxChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ArtTool3ComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnArtTool3ComboBoxChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ArtTool4ComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnArtTool4ComboBoxChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ArtDefaultToolComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>CQtVREDToolsPanel</receiver>
+        <slot>OnArtDefaultToolComboBoxClicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">ToolHolder.h</include>
+    <include location="local" impldecl="in implementation">VREDToolsSceneManager.h</include>
+    <include location="local" impldecl="in implementation">iostream</include>
+    <include location="local" impldecl="in implementation">ARTToolsManager.h</include>
+    <include location="local" impldecl="in implementation">vrOsgWidget.h</include>
+    <include location="local" impldecl="in implementation">OSGNode.h</include>
+    <include location="local" impldecl="in implementation">OSGTransform.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkNavigationTranslateTool.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkNavigationTranslationResetTool.h</include>
+    <include location="local" impldecl="in implementation">FlystickWalkCageFilterTool.h</include>
+    <include location="local" impldecl="in implementation">MouseTrackballNavigationTool.h</include>
+    <include location="local" impldecl="in implementation">XmlToolLoader.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">string</include>
+    <include location="local" impldecl="in implementation">vector</include>
+    <include location="local" impldecl="in implementation">ToolHolder.h</include>
+    <include location="local" impldecl="in implementation">ArtToolsManager.h</include>
+    <include location="local" impldecl="in implementation">ART2DWindowManager.h</include>
+    <include location="local" impldecl="in implementation">ART2DWindowInterface.h</include>
+    <include location="local" impldecl="in implementation">ScreenIntersector.h</include>
+    <include location="local" impldecl="in implementation">QtVRED2DViewMainWindow.h</include>
+    <include location="local" impldecl="in implementation">QtVRED2DNavMainWindow.h</include>
+    <include location="local" impldecl="in implementation">CageFilter.h</include>
+    <include location="local" impldecl="in implementation">QtVREDToolsPanel.ui.h</include>
+</includes>
+<forwards>
+    <forward>class CVREDToolsSceneManager</forward>
+    <forward>class CQtVRED2DViewMainWindow</forward>
+    <forward>class CQtVRED2DNavMainWindow</forward>
+</forwards>
+<variables>
+    <variable>CQtVRED2DViewMainWindow *m_pRightWindow;</variable>
+    <variable>CQtVRED2DViewMainWindow *m_pLeftWindow;</variable>
+    <variable>CVREDToolsSceneManager* m_pSceneManager;</variable>
+    <variable>CQtVRED2DNavMainWindow *m_pNavWindow;</variable>
+</variables>
+<slots>
+    <slot>Loop()</slot>
+    <slot>LoadDefaultTools()</slot>
+    <slot>OnUseTrackingCheckBoxToggled()</slot>
+    <slot>OnPrintVREDInfoButton()</slot>
+    <slot>OnArtDefaultToolComboBoxClicked()</slot>
+    <slot>OnArtTool1ComboBoxChanged()</slot>
+    <slot>OnArtTool2ComboBoxChanged()</slot>
+    <slot>OnArtTool3ComboBoxChanged()</slot>
+    <slot>OnArtTool4ComboBoxChanged()</slot>
+    <slot>OnSaveToolsDefaultConfigurationButtonClicked()</slot>
+    <slot>OnLoadToolsConfigButtonClicked()</slot>
+    <slot>OnUpdateComboBoxes()</slot>
+    <slot>OnLoad2DViewConfigButtonClicked()</slot>
+    <slot>OnSave2DViewExampleConfigButtonClicked()</slot>
+    <slot>OnCageFilterNodeNameLineEditTextChanged()</slot>
+    <slot>OnOpenLeftWindowButtonClicked()</slot>
+    <slot>OnOpenRightWindowButtonClicked()</slot>
+    <slot>OnCloseLeftWindowButtonClicked()</slot>
+    <slot>OnCloseRightWindowButtonClicked()</slot>
+    <slot>OnOpenNavWindowButtonClicked()</slot>
+    <slot>OnCloseNavWindowButtonClicked()</slot>
+    <slot>OnLoad2DNavWindowConfigButtonClicked()</slot>
+    <slot>OnSave2DNavWindowExampleConfigButtonClicked()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
