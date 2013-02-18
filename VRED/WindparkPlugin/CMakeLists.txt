@@ -16,10 +16,11 @@ SET( SRCS
 
 # Moc header files
 SET( MOC_HDRS
-	ProjectControllerLoader.h
-	WindparkPluginPanel.h
+	ProjectControllerLoaderDialog.h
+	#WindparkPluginPanel.h
 	WPEAttrPanel.h
-	WPEMainFrame.h
+	#WPEMainFrame.h
+	WPEDiagramView.h
 )
 
 # Header files
@@ -27,7 +28,7 @@ SET( MOC_HDRS
 
 # UI files
 SET( UIS
-	ProjectControllerLoader.ui
+	ProjectControllerLoaderDialog.ui
 	WindparkPluginPanel.ui
 	WPEAttrPanel.ui
 	WPEMainFrame.ui
@@ -40,7 +41,7 @@ QT_WRAP_UI( WindparkPlugin UI_H UI_CPP ${UIS} )
 QT_WRAP_CPP( WindparkPlugin UI_CPP ${UI_H} ${MOC_HDRS} )
 
 INCLUDE_DIRECTORIES(
-	.
+	${CMAKE_CURRENT_SOURCE_DIR}
 	${CMAKE_CURRENT_BINARY_DIR}
 )
 
