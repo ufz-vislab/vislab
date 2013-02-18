@@ -35,6 +35,7 @@ ENDIF ()
 # Only release configurations possible when compiling a VRED plugin
 SET (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)
 FIND_PACKAGE( Qt3VRED REQUIRED )
+FIND_PACKAGE(VRPN)
 
 INCLUDE (CMakeConfiguration/Macros.cmake)
 
@@ -89,7 +90,7 @@ SET (VRED_LIBRARIES
 	vrUtils vrQtExt Cg CgGL OSGBase OSGSystem OSGWindowWIN32 OSGContrib opengl32
 	glut32 vrOpenSGExt vrOpenSGNav vrOpenSGUtils vrMicroKernel vrOpenSGRender
 	vrMessageRW vrIconManager als vrQScintilla vrCBShader vrKernel)
-	
+
 SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin )
 SET( LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib )
 
@@ -98,6 +99,9 @@ IF (VISLAB_PACKAGING)
 ENDIF ()
 
 ADD_SUBDIRECTORY(VRED/SkyBackgroundPlugin)
-ADD_SUBDIRECTORY(SpaceNavigator)
-ADD_SUBDIRECTORY(VRED/SpaceNavigatorPlugin)
+IF(VRPN_FOUND)
+  ADD_SUBDIRECTORY(SpaceNavigator)
+  ADD_SUBDIRECTORY(VRED/SpaceNavigatorPlugin)
+ENDIF()
 ADD_SUBDIRECTORY(VRED/SwitchPlugin)
+ADD_SUBDIRECTORY(VRED/WindparkPlugin)

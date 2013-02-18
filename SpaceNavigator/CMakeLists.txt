@@ -9,8 +9,6 @@ IF (NOT USE_VRED)
   FIND_PACKAGE(OpenSGSupportlibs REQUIRED)
 ENDIF ()
 
-FIND_PACKAGE(VRPN REQUIRED)
-
 # Add subprojects
 ADD_SUBDIRECTORY(SpaceNavigatorClient)
 ADD_SUBDIRECTORY(TriangleElevationGrid)

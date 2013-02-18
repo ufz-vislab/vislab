@@ -1,0 +1,334 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CProjectControllerLoaderDialog</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>CProjectControllerLoaderDialog</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>799</width>
+            <height>393</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>650</width>
+            <height>300</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Load settings</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout7</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>40</x>
+                <y>41</y>
+                <width>660</width>
+                <height>232</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout1</cstring>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLineEdit" row="0" column="1">
+                        <property name="name">
+                            <cstring>WorkingDirectoryLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="2" column="0">
+                        <property name="name">
+                            <cstring>ArealImageFilenameButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Areal image</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="3" column="1">
+                        <property name="name">
+                            <cstring>WPETypesFilenameLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="3" column="0">
+                        <property name="name">
+                            <cstring>WPETypesFilenameButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>WPE types</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="2" column="1">
+                        <property name="name">
+                            <cstring>ArealImageFilenameLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="4" column="0">
+                        <property name="name">
+                            <cstring>WPEModelFilenameButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>WPE 3D model</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="1" column="1">
+                        <property name="name">
+                            <cstring>TerrainFilenameLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="1" column="0">
+                        <property name="name">
+                            <cstring>TerrainFilenameButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Terrain file</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="0" column="0">
+                        <property name="name">
+                            <cstring>SetCurrentDirectoryButton</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>120</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Current directory</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="4" column="1">
+                        <property name="name">
+                            <cstring>WPE3DModelFilenameLineEdit</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>40</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout2</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>LoadAllButton</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>1</hsizetype>
+                                <vsizetype>1</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>100</width>
+                                <height>25</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Load all</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>310</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>CloseButton</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>1</hsizetype>
+                                <vsizetype>1</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>100</width>
+                                <height>25</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>close</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>CloseButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnCloseButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>LoadAllButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnLoadAllButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>SetCurrentDirectoryButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnCurrentDirectoryButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>TerrainFilenameButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnTerrainFilenameButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>ArealImageFilenameButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnArealImageFilenameButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>WPETypesFilenameButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnWPETypeFilenameButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>WPEModelFilenameButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CProjectControllerLoaderDialog</receiver>
+        <slot>OnWPE3DModelButtonPressed()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">ProjectControllerLoader.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">qmessagebox.h</include>
+    <include location="local" impldecl="in implementation">ProjectControllerLoaderDialog.ui.h</include>
+</includes>
+<variables>
+    <variable>CProjectControllerLoader m_ProjectControllerLoader;</variable>
+    <variable>QString m_qstrWorkingDirectory;</variable>
+</variables>
+<slots>
+    <slot>OnCloseButtonPressed()</slot>
+    <slot>OnLoadAllButtonPressed()</slot>
+    <slot>OnCurrentDirectoryButtonPressed()</slot>
+    <slot>OnTerrainFilenameButtonPressed()</slot>
+    <slot>OnArealImageFilenameButtonPressed()</slot>
+    <slot>OnWPETypeFilenameButtonPressed()</slot>
+    <slot>OnWPE3DModelButtonPressed()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

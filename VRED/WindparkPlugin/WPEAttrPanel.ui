@@ -1,0 +1,454 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CWPEAttrPanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>CWPEAttrPanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>305</width>
+            <height>915</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>7</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>150</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>WPEAttrPanel</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout3</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>19</x>
+                <y>22</y>
+                <width>191</width>
+                <height>728</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>UseWPERotorsCheckBox</cstring>
+                </property>
+                <property name="text">
+                    <string>Rotoren an</string>
+                </property>
+            </widget>
+            <widget class="QDial">
+                <property name="name">
+                    <cstring>WinddirectionDial</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="wrapping">
+                    <bool>true</bool>
+                </property>
+                <property name="notchTarget">
+                    <number>6</number>
+                </property>
+                <property name="notchesVisible">
+                    <bool>true</bool>
+                </property>
+                <property name="maxValue">
+                    <number>360</number>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer5</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>60</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>ScaleUpButton</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>3</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Groesser</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>ScaleDownButton</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>3</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Kleiner</string>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer3</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>50</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>AddItemButton</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>3</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Neue Anlage</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>RemoveItemButton</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>3</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Anlage entfernen</string>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>50</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1</cstring>
+                </property>
+                <property name="text">
+                    <string>Anlagentyp</string>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>WPETypeNamesCombo</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1_2</cstring>
+                </property>
+                <property name="text">
+                    <string>Nabenhöhe</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>GeneratorHeightLineEdit</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>1</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel2</cstring>
+                </property>
+                <property name="text">
+                    <string>Rotorradius</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>RotorLengthLineEdit</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>1</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1_3</cstring>
+                </property>
+                <property name="text">
+                    <string>Nennleistung (MW)</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>WPEMWHLineEdit</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>1</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer4</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>50</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel2_2</cstring>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1_4</cstring>
+                </property>
+                <property name="text">
+                    <string>Nennleistung des Windparks (MW)</string>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>WindparkProductionLineEdit</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>1</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>100</width>
+                        <height>0</height>
+                    </size>
+                </property>
+                <property name="paletteForegroundColor">
+                    <color>
+                        <red>255</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>14</pointsize>
+                        <bold>1</bold>
+                    </font>
+                </property>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>AddItemButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnAddItemButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>RemoveItemButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnRemoveActiveItemButton()</slot>
+    </connection>
+    <connection>
+        <sender>ScaleDownButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnScaleDownButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>ScaleUpButton</sender>
+        <signal>pressed()</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnScaleUpButtonPressed()</slot>
+    </connection>
+    <connection>
+        <sender>WPETypeNamesCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnTypeNamesComboTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>WinddirectionDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnWinddirectionDialValueChanged()</slot>
+    </connection>
+    <connection>
+        <sender>UseWPERotorsCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>CWPEAttrPanel</receiver>
+        <slot>OnUseWPERotorsCheckBoxToggled()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">WPEProjectController.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">WPETypeInfo.h</include>
+    <include location="local" impldecl="in declaration">WPETypeInfo.h</include>
+    <include location="local" impldecl="in implementation">WPEAttrPanel.ui.h</include>
+</includes>
+<slots>
+    <slot>OnAddItemButtonPressed()</slot>
+    <slot>OnRemoveActiveItemButton()</slot>
+    <slot>OnLoadArealImageButton()</slot>
+    <slot>OnScaleDownButtonPressed()</slot>
+    <slot>OnScaleUpButtonPressed()</slot>
+    <slot>AddTypeNameToTypeNamesCombo( const char * typeName )</slot>
+    <slot returnType="const char *">GetCurrentTypeNameFromTypeNamesCombo()</slot>
+    <slot>OnTypeNamesComboTextChanged()</slot>
+    <slot>OnLoadWPETypesButtonPressed()</slot>
+    <slot>OnLoadTerrainButtonPressed()</slot>
+    <slot>OnSet3DModelFileNameButtonPressed()</slot>
+    <slot>SetCurrentWPEType( CWPETypeInfo wpeType )</slot>
+    <slot>SetWPETypeAttributes( CWPETypeInfo typeInfo )</slot>
+    <slot>SetEnergyProduction( float production )</slot>
+    <slot>OnSaveWindparkButtonPressed()</slot>
+    <slot>OnWinddirectionDialValueChanged()</slot>
+    <slot returnType="float">GetWinddirection()</slot>
+    <slot>OnUseWPERotorsCheckBoxToggled()</slot>
+    <slot>OnLoadLandscapeButtonPressed()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
