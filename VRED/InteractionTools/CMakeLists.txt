@@ -15,6 +15,39 @@ SET( SRCS
 	Tools/VREDToolsPlugin.cpp
 	Tools/VREDToolsSceneManager.cpp
 	Tools/WPEAttrPanel.ui.h
+
+	Tools/ART2DWindowInterface.cpp
+	Tools/ART2DWindowManager.cpp
+	Tools/ARTNavWindowInterface.cpp
+	Tools/ARTToolsManager.cpp
+	Tools/CageFilter.cpp
+	Tools/DefaultTool.cpp
+	Tools/FlystickCageFilterBBoxTool.cpp
+	Tools/FlystickMixedModePickTool.cpp
+	Tools/FlystickNavigationTool.cpp
+	Tools/FlystickPickTool.cpp
+	Tools/FlystickTranslateTool.cpp
+	Tools/FlystickTranslationResetTool.cpp
+	Tools/FlystickWalkCageFilterTool.cpp
+	Tools/FlystickWalkNavigationPickTool.cpp
+	Tools/FlystickWalkNavigationTool.cpp
+	Tools/FlystickWalkNavigationTranslateTool.cpp
+	Tools/FlystickWalkNavigationTranslationResetTool.cpp
+	Tools/MouseNavigationTool.cpp
+	Tools/MouseToolBase.cpp
+	Tools/MouseTrackballFlystickWalkNavigationTool.cpp
+	Tools/MouseTrackballNavigationTool.cpp
+	Tools/NodeNamesSet.cpp
+	Tools/OpenSGToolsSceneManager.cpp
+	Tools/ScreenIntersector.cpp
+	Tools/ToolBase.cpp
+	Tools/ToolFactory.cpp
+	Tools/ToolHolder.cpp
+	Tools/Vr3DAnalogToolBase.cpp
+	Tools/Vr3DButtonToolBase.cpp
+	Tools/VrpnArtTrackingClient.cpp
+	Tools/VrpnToolBase.cpp
+	Tools/XmlToolLoader.cpp
 )
 
 # Moc header files

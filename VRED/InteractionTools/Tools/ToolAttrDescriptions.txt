@@ -1,0 +1,36 @@
+Geändert:
+
+CFlystickCageFilterBBoxTool -> Einfügen der Funktion zum setzen der variablen als string
+
+CFlystickMixedModePickTool -> Einfügen der Funktion zum setzen der variablen als string
+
+FlystickNavigationTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+FlystickPickTool -> Einfügen der Funktion zum setzen der variablen als string
+
+FlystickTranslateTool -> Auskommentieren der eigenen variablen m_bPickOnlyNodesInList etc da sie von FlystickPickTool
+geerbt werden, Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es hier keine eigenen variablen!
+
+FlystickTranslationResetTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CFlystickWalkCageFilterTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CFlystickWalkNavigationPickTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CFlystickWalkNavigationTool -> Einfügen der Funktion zum setzen der variablen als string
+
+CFlystickWalkNavigationTranslateTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CFlystickWalkNavigationTranslationResetTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CMouseNavigationTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
+
+CMouseTrackballFlystickWalkNavigationTool -> Einfügen der Funktion zum setzen der variablen als string, allerdings gibt es
+hier keine eigenen variablen!
