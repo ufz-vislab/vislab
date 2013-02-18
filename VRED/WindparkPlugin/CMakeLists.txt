@@ -12,14 +12,14 @@ SET( SRCS
 	WPEProjectController.cpp
 	WPEState.cpp
 	WPETypeInfo.cpp
+
+	ProjectControllerLoaderDialog.ui.h
+	WPEAttrPanel.ui.h
+	WPEMainFrame.ui.h
 )
 
 # Moc header files
 SET( MOC_HDRS
-	ProjectControllerLoaderDialog.h
-	#WindparkPluginPanel.h
-	WPEAttrPanel.h
-	#WPEMainFrame.h
 	WPEDiagramView.h
 )
 
