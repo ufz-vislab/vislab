@@ -16,7 +16,7 @@ void CQtVREDToolsPanel::init(){
     m_pSceneManager = new CVREDToolsSceneManager();
     CToolHolder::Instance()->SetSceneManager(m_pSceneManager);
     
-    VRPNServerLineEdit->setText(QString("DTrack@viswork06.intern.ufz.de"));
+    VRPNServerLineEdit->setText(QString("DTrack@141.65.34.28"));
     
     LoadDefaultTools();
 }

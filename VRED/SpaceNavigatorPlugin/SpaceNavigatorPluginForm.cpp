@@ -40,7 +40,7 @@ SpaceNavigatorPluginForm::SpaceNavigatorPluginForm( QWidget* parent /*= 0*/, con
 	QSettings settings;
 	settings.setPath("UFZ", "VRED-SpaceNavigatorPlugin");
 	QString connectString = settings.readEntry("connectionString",
-		QString("SpaceNav@viswork06.intern.ufz.de"));
+		QString("spacenav@141.65.34.28"));
 	vrpnDeviceLineEdit->setText(connectString);
 }
 

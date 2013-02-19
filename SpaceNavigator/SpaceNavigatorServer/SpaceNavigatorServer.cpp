@@ -30,7 +30,6 @@ int main(int argc, char **argv)
 
 	// Create new Navigator device object
 	// The name has to be used by the client application
-	//if((nav = new vrpn_3DConnexion_Navigator("SpaceNav@viswork01.intern.ufz.de", connection)) == NULL)
 	if((nav = new vrpn_3DConnexion_Navigator(computerName, connection)) == NULL)
 	{
 		printf("Can´t create new device\n");
