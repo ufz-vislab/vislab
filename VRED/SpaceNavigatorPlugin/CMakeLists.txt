@@ -62,7 +62,7 @@ ADD_LIBRARY( SpaceNavigatorPlugin SHARED ${SRCS} ${HDRS} ${MOC_HDRS} ${UI_CPP} )
 
 # Link additional libraries
 TARGET_LINK_LIBRARIES( SpaceNavigatorPlugin
-	${QT_LIBRARIES} ${VRED_LIBRARIES} ${VRPN_LIBRARIES} ${QUAT_LIBRARIES}
+	${QT_LIBRARIES} ${VRED_LIBRARIES} ${VRPN_LIBRARIES}
 	SpaceNavigatorClient TriangleElevationGrid
 )
 

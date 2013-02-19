@@ -15,6 +15,7 @@ INCLUDE_DIRECTORIES(
 
 # Create library
 ADD_LIBRARY( SpaceNavigatorClient STATIC ${SOURCES} )
+ADD_DEPENDENCIES( SpaceNavigatorClient VRPN )
 
 # Linked libraries
-TARGET_LINK_LIBRARIES(SpaceNavigatorClient ${VRPN_LIBRARIES} ${QUAT_LIBRARIES} )
+TARGET_LINK_LIBRARIES(SpaceNavigatorClient ${VRPN_LIBRARIES} )
