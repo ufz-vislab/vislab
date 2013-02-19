@@ -14,7 +14,6 @@ SET( SRCS
 	Tools/QtVREDToolsPanel.ui.h
 	Tools/VREDToolsPlugin.cpp
 	Tools/VREDToolsSceneManager.cpp
-	Tools/WPEAttrPanel.ui.h
 
 	Tools/ART2DWindowInterface.cpp
 	Tools/ART2DWindowManager.cpp
@@ -46,13 +45,17 @@ SET( SRCS
 	Tools/Vr3DAnalogToolBase.cpp
 	Tools/Vr3DButtonToolBase.cpp
 	Tools/VrpnArtTrackingClient.cpp
-	Tools/VrpnToolBase.cpp
 	Tools/XmlToolLoader.cpp
 )
 
 # Moc header files
 SET( MOC_HDRS
-	""
+	2DView/ART2DImageViewer.h
+	2DView/IART2DView.h
+	2DView/IQtART2DViewWidget.h
+	2DView/QtVRED2DViewMainWindow.h
+	NavigationView/QtNavCanvasView.h
+	NavigationView/QtVRED2DNavMainWindow.h
 )
 
 # Header files
@@ -61,7 +64,6 @@ SET( MOC_HDRS
 # UI files
 SET( UIS
 	Tools/QtVREDToolsPanel.ui
-	Tools/WPEAttrPanel.ui
 )
 
 # this will run uic on .ui files:
@@ -70,27 +72,43 @@ QT_WRAP_UI( InteractionPlugin UI_H UI_CPP ${UIS} )
 # and finally this will run moc:
 QT_WRAP_CPP( InteractionPlugin UI_CPP ${UI_H} ${MOC_HDRS} )
 
+INCLUDE(ExternalProject)
+ExternalProject_Add( TinyXML
+	PREFIX ${CMAKE_CURRENT_BINARY_DIR}/TinyXML
+	URL http://libtinyxml.googlecode.com/files/libtinyxml-src.zip
+	BUILD_IN_SOURCE 1
+	INSTALL_COMMAND ""
+)
+
 INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}/2DView
 	${CMAKE_CURRENT_SOURCE_DIR}/NavigationView
 	${CMAKE_CURRENT_SOURCE_DIR}/Tools
+	${CMAKE_CURRENT_BINARY_DIR}
 	${CMAKE_CURRENT_BINARY_DIR}/2DView
 	${CMAKE_CURRENT_BINARY_DIR}/NavigationView
 	${CMAKE_CURRENT_BINARY_DIR}/Tools
+	${VRPN_INCLUDE_DIR}
+	${QUAT_INCLUDE_DIR}
+	${CMAKE_CURRENT_BINARY_DIR}/TinyXML/src/TinyXML
 )
 
 # Put moc files in visual studio project folder
 SOURCE_GROUP("UI Files" REGULAR_EXPRESSION "\\w*\\.ui")
 SOURCE_GROUP("Moc Files" REGULAR_EXPRESSION "moc_*")
+SOURCE_GROUP("Generated Files" REGULAR_EXPRESSION "\\w*\\.cxx")
 
 # Create the plugin dll
 ADD_LIBRARY( InteractionPlugin SHARED ${SRCS} ${MOC_HDRS} ${UI_CPP} )
 
 #SET_TARGET_PROPERTIES(SwitchPlugin PROPERTIES LINK_FLAGS "/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /INCREMENTAL:NO")
 
+#LINK_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}/TinyXML/src/TinyXML/lib/${CMAKE_CFG_INTDIR})
+
 # Link additional libraries
 TARGET_LINK_LIBRARIES( InteractionPlugin
-	${QT_LIBRARIES} ${VRED_LIBRARIES}
+	${QT_LIBRARIES} ${VRED_LIBRARIES} ${VRPN_LIBRARIES} ${QUAT_LIBRARIES}
+	${CMAKE_CURRENT_BINARY_DIR}/TinyXML/src/TinyXML/lib/${CMAKE_CFG_INTDIR}/tinyxml.lib
 )
 
 INSTALL_PLUGIN (InteractionPlugin)

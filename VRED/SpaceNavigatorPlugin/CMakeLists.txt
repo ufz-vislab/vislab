@@ -47,7 +47,7 @@ INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_BINARY_DIR}
 	${CMAKE_SOURCE_DIR}/SpaceNavigator/SpaceNavigatorClient
 	${CMAKE_SOURCE_DIR}/SpaceNavigator/TriangleElevationGrid
-	${VRPN_INCLUDE_DIR} 
+	${VRPN_INCLUDE_DIR}
 	${QUAT_INCLUDE_DIR}
 )
 

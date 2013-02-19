@@ -11,14 +11,12 @@
 
 #include "vrModuleBase.h"
 
-//#include "CQTestWidget.h"
-#include "QtVREDToolsPanel.h"
-
 //----------------------------------------------------------------------------
 // forward declarations
 //----------------------------------------------------------------------------
 
 class QLabel;
+class CQtVREDToolsPanel;
 
 
 class CVREDToolsPlugin : public vrModuleBase {

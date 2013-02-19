@@ -10,6 +10,8 @@
 ** destructor.
 *****************************************************************************/
 
+#include <qfiledialog.h>
+
 void CQtVREDToolsPanel::init(){
     m_pSceneManager = new CVREDToolsSceneManager();
     CToolHolder::Instance()->SetSceneManager(m_pSceneManager);
@@ -94,7 +96,7 @@ void CQtVREDToolsPanel::OnPrintVREDInfoButton(){
 
 
 void CQtVREDToolsPanel::OnLoadToolsConfigButtonClicked(){
-    QString fileFilters = tr("xml dateien (*.xml)\n";
+    QString fileFilters = tr("xml dateien (*.xml)\n");
     QString fileName = QFileDialog::getOpenFileName(QString("."), fileFilters, this);
     if (! fileName.isEmpty()){
 	CXmlToolLoader::LoadFile(fileName.ascii());
