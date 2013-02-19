@@ -4,7 +4,6 @@
 SET( SRCS
 	C3DTexture.cpp
 	DataVolume.cpp
-	QtOpenSGVolumeViewer.ui.h
 	VRED3DTexturePanel.ui.h
 	VRED3DTexturePlugin.cpp
 )
@@ -16,7 +15,6 @@ SET( MOC_HDRS
 
 # UI files
 SET( UIS
-	QtOpenSGVolumeViewer.ui
 	VRED3DTexturePanel.ui
 )
 

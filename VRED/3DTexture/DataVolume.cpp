@@ -75,7 +75,7 @@ void CDataVolume::ReadTextureBin(const char *filename){
 
 void CDataVolume::ReadTextureBin(const wchar_t *filename){
 	FILE *fpointer;
-	fpointer = _wfopen(filename, _T("rb"));
+	fpointer = _wfopen(filename, L"rb");
 	ReadTextureBin(fpointer);
 }
 
