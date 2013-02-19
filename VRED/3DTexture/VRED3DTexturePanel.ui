@@ -1,0 +1,387 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>QVRED3DTexturePanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>QVRED3DTexturePanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>600</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>3D Textures</string>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout6</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>270</width>
+                <height>320</height>
+            </rect>
+        </property>
+        <vbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>5</number>
+            </property>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout1</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>AddToVREDButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Add to VRED</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>RemoveFromVREDButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Remove f.V.</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>LoadFileButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>load from file</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout2</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>XSliceRadioButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Show X slice</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>150</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </hbox>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>XSliceSlider</cstring>
+                </property>
+                <property name="maxValue">
+                    <number>100</number>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout3</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>YSliceRadioButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Show Y slice</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>150</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </hbox>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>YSliceSlider</cstring>
+                </property>
+                <property name="maxValue">
+                    <number>100</number>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout4</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>ZSliceRadioButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Show Z slice</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>150</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </hbox>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>ZSliceSlider</cstring>
+                </property>
+                <property name="maxValue">
+                    <number>100</number>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer4</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>30</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout5</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>UseColorTableRadioButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Use color table</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer5</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>140</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </hbox>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>LowClipValueSlider</cstring>
+                </property>
+                <property name="maxValue">
+                    <number>100</number>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>HighClipValueSlider</cstring>
+                </property>
+                <property name="maxValue">
+                    <number>100</number>
+                </property>
+                <property name="value">
+                    <number>100</number>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+        </vbox>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>AddToVREDButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnAddToVREDButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>RemoveFromVREDButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnRemoveFromVREDButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>LoadFileButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnLoadFromFileButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>XSliceRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>YSliceRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>YSliceRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>XSliceSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>YSliceSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>ZSliceSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnSliceValuesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>UseColorTableRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnUseColorTableRadioButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>LowClipValueSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnClipValueChanged()</slot>
+    </connection>
+    <connection>
+        <sender>HighClipValueSlider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>QVRED3DTexturePanel</receiver>
+        <slot>OnClipValueChanged()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">C3DTexture.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">VRED3DTexturePanel.ui.h</include>
+</includes>
+<variables>
+    <variable>C3DTexture m_3DTexture;</variable>
+</variables>
+<slots>
+    <slot>OnAddToVREDButtonClicked()</slot>
+    <slot>OnRemoveFromVREDButtonClicked()</slot>
+    <slot>OnLoadFromFileButtonClicked()</slot>
+    <slot>OnSliceValuesChanged()</slot>
+    <slot>OnUseColorTableRadioButtonClicked()</slot>
+    <slot>OnClipValueChanged()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
