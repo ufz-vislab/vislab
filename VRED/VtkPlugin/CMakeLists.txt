@@ -2,8 +2,21 @@
 
 # Source files
 SET( SRCS
-
-	VredPanel/DataVisualizerVREDPanel.cpp
+	BaseLib/AttrPanelObserver.cpp
+	BaseLib/AttrPanelHolder.cpp
+	BaseLib/AttrPanelSelector.cpp
+	BaseLib/DataVisApp.cpp
+	BaseLib/Observer.cpp
+	BaseLib/OpenSGObserver.cpp
+	BaseLib/Subject.cpp
+	QtLib/CQtAttrPanelBase.cpp
+	QtLib/CQtTestPanel.ui.h
+	QtLib/QtAttrPanelHolder.cpp
+	QtLib/QtAttrPanelSelector.cpp
+	QtLib/QtAttrPanelSelectorItem.cpp
+	QtLib/QtOpenSGObserver.cpp
+	QtLib/QtScalarGridAttrPanel.ui.h
+	QtLib/QtVectorGridAttrPanel.ui.h
 	VredPanel/DataVisualizerVREDPanel.ui.h
 	VredPlugin/OpenSGDataVisualizerVREDPlugin.cpp
 	VtkOsgActor/vtkOsgActor.cpp
@@ -22,11 +35,18 @@ SET( SRCS
 
 # Moc header files
 SET( MOC_HDRS
-	VredPanel/DataVisualizerVREDPanel.h
+	QtLib/CQtAttrPanelBase.h
+	QtLib/QtAttrPanelHolder.h
+	QtLib/QtAttrPanelSelector.h
 )
 
 # UI files
-SET( UIS VredPanel/DataVisualizerVREDPanel.ui )
+SET( UIS
+	QtLib/CQtTestPanel.ui
+	QtLib/QtScalarGridAttrPanel.ui
+	QtLib/QtVectorGridAttrPanel.ui
+	VredPanel/DataVisualizerVREDPanel.ui
+)
 
 # this will run uic on .ui files:
 QT_WRAP_UI( VtkPlugin UI_H UI_CPP ${UIS} )
@@ -34,11 +54,16 @@ QT_WRAP_UI( VtkPlugin UI_H UI_CPP ${UIS} )
 # and finally this will run moc:
 QT_WRAP_CPP( VtkPlugin UI_CPP ${UI_H} ${MOC_HDRS} )
 
+INCLUDE(${VTK_USE_FILE})
+
 INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}
+	${CMAKE_CURRENT_SOURCE_DIR}/BaseLib
+	${CMAKE_CURRENT_SOURCE_DIR}/QtLib
 	${CMAKE_CURRENT_SOURCE_DIR}/VredPanel
 	${CMAKE_CURRENT_SOURCE_DIR}/OpenSGDataVisualizerVREDPlugin
 	${CMAKE_CURRENT_SOURCE_DIR}/VtkOsgActor
+	${CMAKE_CURRENT_SOURCE_DIR}/VtkScalarGrid
 	${CMAKE_CURRENT_BINARY_DIR}
 )
 
@@ -53,7 +78,7 @@ ADD_LIBRARY( VtkPlugin SHARED ${SRCS} ${MOC_HDRS} ${UI_CPP} )
 
 # Link additional libraries
 TARGET_LINK_LIBRARIES( VtkPlugin
-	${QT_LIBRARIES} ${VRED_LIBRARIES}
+	${QT_LIBRARIES} ${VRED_LIBRARIES} vtkRendering vtkWidgets
 )
 
 INSTALL_PLUGIN (VtkPlugin)

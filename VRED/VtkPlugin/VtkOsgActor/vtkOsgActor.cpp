@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include ".\vtkosgactor.h"
 
 #include "vtkMapper.h"
@@ -309,7 +308,7 @@ NodePtr vtkOsgActor::ProcessGeometryNormalsAndColorsPerVertex(){
 	beginEditCP(m_posgLengths);
 	beginEditCP(m_posgIndices);{
 		vtkCellArray *pCells;
-		int npts, *pts;
+		vtkIdType npts, *pts;
 		int prim;
 
 		prim = 0;
@@ -434,7 +433,7 @@ NodePtr vtkOsgActor::ProcessGeometryNonIndexedCopyAttributes(int gl_primitive_ty
 	beginEditCP(m_posgColors);
 	beginEditCP(m_posgNormals);{
 		int prim = 0;
-		int npts, *pts, i;
+		vtkIdType npts, *pts, i;
 		if (pCells->GetNumberOfCells() > 0){
 			for (pCells->InitTraversal(); pCells->GetNextCell(npts, pts); prim++){
 				m_posgLengths->addValue(npts);
