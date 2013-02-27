@@ -1,0 +1,269 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>CDataVisualizerVREDPanel</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>CDataVisualizerVREDPanel</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>466</width>
+            <height>834</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>340</width>
+            <height>770</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>tabWidget2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>360</width>
+                <height>790</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>3</hsizetype>
+                <vsizetype>3</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>340</width>
+                <height>770</height>
+            </size>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>VTK Data</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout18</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>11</y>
+                        <width>342</width>
+                        <height>738</height>
+                    </rect>
+                </property>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout3</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QPushButton" row="2" column="1">
+                                <property name="name">
+                                    <cstring>LoadVtlVectorDataButton</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="text">
+                                    <string>Load vtk vector data</string>
+                                </property>
+                            </widget>
+                            <spacer row="0" column="2">
+                                <property name="name">
+                                    <cstring>spacer2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>40</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>textLabel2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Vector data</string>
+                                </property>
+                            </widget>
+                            <spacer row="0" column="1">
+                                <property name="name">
+                                    <cstring>spacer1</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>40</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QCheckBox" row="0" column="0">
+                                <property name="name">
+                                    <cstring>ShowSciVizDataCheckBox</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Show</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="1" column="1">
+                                <property name="name">
+                                    <cstring>LoadScalarStructuredGridButton</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="text">
+                                    <string>Structured</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="1" column="2">
+                                <property name="name">
+                                    <cstring>LoadScalarUnstructuredGridButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Unstructured</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Scalar data</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QFrame">
+                        <property name="name">
+                            <cstring>VTKDataPanel</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>3</hsizetype>
+                                <vsizetype>3</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>340</width>
+                                <height>650</height>
+                            </size>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Tools</string>
+            </attribute>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>LoadScalarStructuredGridButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CDataVisualizerVREDPanel</receiver>
+        <slot>OnLoadScalarStructuredGridButton()</slot>
+    </connection>
+    <connection>
+        <sender>LoadScalarUnstructuredGridButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CDataVisualizerVREDPanel</receiver>
+        <slot>OnLoadScalarUnstructuredGridButton()</slot>
+    </connection>
+    <connection>
+        <sender>LoadVtlVectorDataButton</sender>
+        <signal>clicked()</signal>
+        <receiver>CDataVisualizerVREDPanel</receiver>
+        <slot>OnLoadVtkVectorDataButton()</slot>
+    </connection>
+    <connection>
+        <sender>ShowSciVizDataCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>CDataVisualizerVREDPanel</receiver>
+        <slot>OnShowSciVizDataCheckBoxClicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">qsplitter.h</include>
+    <include location="local" impldecl="in implementation">QtAttrPanelSelector.h</include>
+    <include location="local" impldecl="in implementation">QtAttrPanelHolder.h</include>
+    <include location="local" impldecl="in implementation">DataVisApp.h</include>
+    <include location="local" impldecl="in implementation">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">vrScenegraph.h</include>
+    <include location="local" impldecl="in implementation">OpenSG/OSGNode.h</include>
+    <include location="local" impldecl="in implementation">DataVisualizerVREDPanel.ui.h</include>
+</includes>
+<forwards>
+    <forward>class QSplitter</forward>
+    <forward>class CQtAttrPanelSelector</forward>
+    <forward>class CQtAttrPanelHolder</forward>
+    <forward>class CDataVisApp</forward>
+</forwards>
+<variables>
+    <variable>CQtAttrPanelHolder *m_pAttrPanelHolder;</variable>
+    <variable>CQtAttrPanelSelector *m_pAttrPanelSelector;</variable>
+    <variable>QSplitter *m_pqVTKDataPanelSplitter;</variable>
+    <variable>CDataVisApp *m_pDataVisApp;</variable>
+</variables>
+<slots>
+    <slot>OnLoadScalarStructuredGridButton()</slot>
+    <slot>OnLoadScalarUnstructuredGridButton()</slot>
+    <slot>OnLoadVtkVectorDataButton()</slot>
+    <slot>OnLoadVectorUnstructuredGridButton()</slot>
+    <slot>OnShowSciVizDataCheckBoxClicked()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

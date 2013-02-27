@@ -37,6 +37,7 @@ ENDIF ()
 # Only release configurations possible when compiling a VRED plugin
 SET (CMAKE_CONFIGURATION_TYPES "RelWithDebInfo;Release" CACHE TYPE INTERNAL FORCE)
 FIND_PACKAGE( Qt3VRED REQUIRED )
+FIND_PACKAGE( VTK )
 
 INCLUDE(ExternalProject)
 ExternalProject_Add( VRPN
@@ -119,3 +120,6 @@ ADD_SUBDIRECTORY(VRED/SwitchPlugin)
 ADD_SUBDIRECTORY(VRED/NavigationPlugin)
 ADD_SUBDIRECTORY(VRED/WindparkPlugin)
 ADD_SUBDIRECTORY(VRED/3DTexture)
+IF(VTK_FOUND)
+  ADD_SUBDIRECTORY(VRED/VtkPlugin)
+ENDIF()
