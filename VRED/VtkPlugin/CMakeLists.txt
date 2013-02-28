@@ -54,7 +54,9 @@ QT_WRAP_UI( VtkPlugin UI_H UI_CPP ${UIS} )
 # and finally this will run moc:
 QT_WRAP_CPP( VtkPlugin UI_CPP ${UI_H} ${MOC_HDRS} )
 
-INCLUDE(${VTK_USE_FILE})
+IF(EXISTS ${CMAKE_BINARY_DIR}/vtk/build/VTKConfig.cmake)
+	INCLUDE(${CMAKE_BINARY_DIR}/vtk/build/VTKConfig.cmake)
+ENDIF()
 
 INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}
@@ -65,6 +67,7 @@ INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}/VtkOsgActor
 	${CMAKE_CURRENT_SOURCE_DIR}/VtkScalarGrid
 	${CMAKE_CURRENT_BINARY_DIR}
+	${VTK_INCLUDE_DIRS}
 )
 
 # Put moc files in visual studio project folder
@@ -73,10 +76,12 @@ SOURCE_GROUP("Moc Files" REGULAR_EXPRESSION "moc_*")
 
 # Create the plugin dll
 ADD_LIBRARY( VtkPlugin SHARED ${SRCS} ${MOC_HDRS} ${UI_CPP} )
+ADD_DEPENDENCIES( VtkPlugin VTK )
 
 #SET_TARGET_PROPERTIES(VtkPlugin PROPERTIES LINK_FLAGS "/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /INCREMENTAL:NO")
 
 # Link additional libraries
+LINK_DIRECTORIES(${CMAKE_BINARY_DIR}/vtk/build/bin/${CMAKE_CFG_INTDIR})
 TARGET_LINK_LIBRARIES( VtkPlugin
 	${QT_LIBRARIES} ${VRED_LIBRARIES} vtkRendering vtkWidgets
 )
